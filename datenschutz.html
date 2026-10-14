@@ -2,46 +2,78 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
   <title>Datenschutzerklärung – Proxima</title>
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.7;
+      max-width: 780px;
+      margin: 48px auto;
+      padding: 0 22px;
+      background: #10151e;
+      color: #e5e9f0;
+    }
+    h1,h2 { line-height: 1.3; color: #fff; }
+    h1 { font-size: 2rem; }
+    h2 { margin-top: 2rem; font-size: 1.25rem; }
+    a { color: #9cc7ff; }
+    .muted { color: #a8b2c2; }
+    footer {
+      margin: 3rem 0;
+      padding-top: 1rem;
+      border-top: 1px solid #344052;
+    }
+  </style>
 </head>
 <body>
-  <h1>Datenschutzerklärung – Proxima</h1>
+  <main>
+    <h1>Datenschutzerklärung für Proxima</h1>
+    <p class="muted">Stand: 14. Oktober 2026</p>
 
-  <p>Stand: 14. Oktober 2026</p>
+    <p>Proxima ist ein privat entwickelter Sprachassistent für macOS und wird derzeit ausschließlich persönlich genutzt. Diese Erklärung beschreibt insbesondere die Verarbeitung von Google-Kalenderdaten sowie die Sprach- und KI-Funktionen der Anwendung.</p>
 
-  <h2>Über Proxima</h2>
-  <p>Proxima ist ein privat entwickelter
-  Sprachassistent für macOS und wird
-  ausschließlich für persönliche Zwecke verwendet.</p>
+    <h2>1. Verantwortlichkeit und Kontakt</h2>
+    <p>Proxima wird als privates Projekt betrieben. Fragen zum Umgang mit Daten können an die im Google-OAuth-Einwilligungsbildschirm angegebene Support-E-Mail-Adresse gerichtet werden.</p>
 
-  <h2>Google-Kalenderdaten</h2>
-  <p>Proxima verwendet die Google Calendar API,
-  um nach ausdrücklicher Autorisierung durch den
-  Nutzer Kalender und Termine abzurufen sowie
-  Kalenderfunktionen bereitzustellen.</p>
+    <h2>2. Zugriff auf Google Kalender</h2>
+    <p>Nach ausdrücklicher Anmeldung und Einwilligung greift Proxima über die Google Calendar API auf Kalenderlisten und Termine des verbundenen Google-Kontos zu. Dabei werden insbesondere Kalendertitel, Termintitel, Anfangs- und Endzeiten, Ganztagsstatus, Orte sowie Kalender- und Ereigniskennungen verarbeitet.</p>
 
-  <p>Der Zugriff erfolgt ausschließlich im Rahmen
-  der vom Nutzer erteilten Berechtigungen.
-  Proxima verkauft keine Google-Nutzerdaten.</p>
+    <p>Diese Informationen werden benötigt, um Kalenderabfragen, Tagesbriefings, Erinnerungen, Terminsuche und Konfliktprüfungen auszuführen. Proxima kann außerdem auf ausdrücklichen Befehl vorhandene Google-Kalendertermine ändern oder löschen. Termine und Erinnerungen können über Apple Kalender erstellt werden; eine Übertragung in Google Kalender hängt von der eingerichteten Kalendersynchronisierung ab.</p>
 
-  <h2>Speicherung und Verarbeitung</h2>
-  <p>OAuth-Zugangsdaten werden lokal auf dem
-  Computer des Nutzers gespeichert.
-  Kalenderdaten werden zur Ausführung der
-  angeforderten Funktionen verarbeitet.</p>
+    <p>Proxima fordert dafür die Google-OAuth-Berechtigungen <code>calendar.events</code> und <code>calendar.calendarlist.readonly</code> an. Es findet kein Verkauf von Google-Kalenderdaten statt.</p>
 
-  <h2>Widerruf</h2>
-  <p>Der Nutzer kann den Zugriff jederzeit über
-  die Sicherheitseinstellungen seines
-  Google-Kontos widerrufen.</p>
+    <h2>3. KI-Dienste und Sprachverarbeitung</h2>
+    <p>Für die Interpretation bestimmter Sprachbefehle verwendet Proxima OpenAI. Dabei können die übermittelten Befehlstexte personenbezogene Angaben enthalten, etwa Namen, Termintitel, Orte oder Uhrzeiten, wenn der Nutzer Kalendertermine erstellen, ändern oder löschen möchte. Die regulären Kalender-Lesefunktionen bereiten die abgerufenen Termine nach dem untersuchten Programmstand lokal für die Sprachausgabe auf; eine pauschale Übertragung sämtlicher abgerufener Kalendertermine an OpenAI ist nicht vorgesehen.</p>
 
-  <h2>Kontakt</h2>
-  <p>Bei Fragen zur Datenverarbeitung kann die
-  Kontaktadresse verwendet werden, die auf dem
-  Google-OAuth-Zustimmungsbildschirm angegeben ist.</p>
+    <p>Für die Spracherkennung können Audioaufnahmen an OpenAI beziehungsweise Google Speech übertragen werden. Die weitere Verarbeitung und Speicherdauer bei diesen externen Diensten richtet sich nach deren jeweils geltenden Bedingungen und Datenschutzhinweisen. Aus dem lokalen Anwendungscode lassen sich dafür keine verbindlichen Löschfristen ableiten.</p>
 
-  <p><a href="index.html">Zurück zur Startseite</a></p>
+    <h2>4. Lokale Speicherung und Protokollierung</h2>
+    <p>Proxima speichert lokal OAuth-Zugangsdaten, Jahrestagsdaten, Erinnerungsstatus und aufgeschobene Erinnerungen. Kalendertermine werden für Abfragen im Arbeitsspeicher verarbeitet. Erkannte Sprachtexte und ausgegebene Antworten, gegebenenfalls auch Kalenderinhalte, können in lokalen Protokolldateien erscheinen.</p>
+
+    <p>Die Datei mit OAuth-Zugangsdaten bleibt gespeichert, bis sie ersetzt oder manuell gelöscht wird. Ein Widerruf der Google-Berechtigung entfernt diese lokale Datei nicht automatisch. Jahrestagsdaten haben keine automatische Löschfrist. Aufgeschobene Erinnerungen werden nach erfolgreicher Nachholung der Sprachausgabe gelöscht.</p>
+
+    <p>Einträge des Spracherinnerungsstatus, die älter als sieben Tage sind, werden beim nächsten erfolgreich abgeschlossenen Erinnerungslauf bereinigt. Wenn Proxima nicht läuft oder die Kalenderabfrage fehlschlägt, kann die Speicherung länger dauern.</p>
+
+    <p>Für Proxima-Protokolle besteht keine feste zeitliche Löschfrist. Beim Programmstart wird die Hauptprotokolldatei ab einer Größe von 2.000.000 Bytes in eine Archivdatei verschoben; ein vorhandenes Archiv wird dabei überschrieben. Während eines laufenden Prozesses erfolgt keine solche Größenrotation.</p>
+
+    <p>Die gewöhnliche temporäre Sprachaufnahme wird im regulären Abschluss- beziehungsweise Fehlerpfad gelöscht. Bei einem Programmabbruch oder Löschfehler kann eine Datei zurückbleiben. Wird die optionale Abyss-Audiodiagnose ausdrücklich aktiviert, können zusätzliche Audio- und Diagnosedateien lokal entstehen; der Anwendungscode sieht hierfür keine automatische Löschfrist vor.</p>
+
+    <h2>5. Zugriff, Weitergabe und Zwecke</h2>
+    <p>Die Verarbeitung dient ausschließlich der vom Nutzer ausgelösten Assistenz-, Kalender-, Erinnerungs- und Sprachfunktionen. Google-Kalenderdaten werden nicht verkauft oder für Werbezwecke verwendet. Eine Übermittlung einzelner kalenderbezogener Befehlsinhalte an OpenAI und die Übermittlung von Sprache an die genannten Spracherkennungsdienste sind wie oben beschrieben möglich.</p>
+
+    <h2>6. Berechtigungen widerrufen und Daten entfernen</h2>
+    <p>Die Google-Kalenderberechtigung kann jederzeit im Google-Konto unter <a href="https://myaccount.google.com/connections">Verbindungen zu Drittanbieter-Apps und -Diensten</a> widerrufen werden. Anschließend kann Proxima nicht mehr mit dem widerrufenen Zugriff auf Google Kalender zugreifen. Bereits lokal gespeicherte Token-, Erinnerungs-, Diagnose- und Protokolldateien werden dadurch nicht automatisch gelöscht und müssen bei Bedarf gesondert entfernt werden. Termine in Google oder Apple Kalender bleiben bestehen, bis sie dort gelöscht werden.</p>
+
+    <h2>7. Änderungen</h2>
+    <p>Diese Erklärung wird aktualisiert, wenn sich die Funktionen oder die Verarbeitung personenbezogener Daten durch Proxima wesentlich ändern.</p>
+  </main>
+
+  <footer>
+    <a href="./">Zurück zur Proxima-Startseite</a>
+  </footer>
 </body>
 </html>
